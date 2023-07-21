@@ -16,6 +16,7 @@ import {
   useColorScheme,
   View,
   Image,
+  SectionList,
 } from 'react-native';
 
 import {
@@ -26,6 +27,8 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import HelloTextView from './HelloTextView';
+import FlatListBasicView from './FlatListBasicView';
+import SectionListBasic from './SectionListBasic';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -84,21 +87,9 @@ function App(): JSX.Element {
             }}
             style={{width: 200, height: 200}}
           />
-          <HelloTextView/>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
+          <HelloTextView />
+          <FlatListBasicView />
+          <SectionListBasic />
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -125,6 +116,3 @@ const styles = StyleSheet.create({
 });
 
 export default App;
-
-
-
